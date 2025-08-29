@@ -26,8 +26,15 @@ button.addEventListener("click", function () {
     img.style.cursor = "pointer";
     img.classList.add("buttonDeleteAnimation");
 
+    let HoursInput = document.createElement("input");
+    HoursInput.type = "time";
+    ulDiv.appendChild(HoursInput);
+
+    HoursInput.style.width = "21%";
+
     img.addEventListener("click", function () {
       ulDiv.removeChild(newElement);
+      ulDiv.removeChild(HoursInput);
     });
 
     buttonDelete.addEventListener("click", function () {
