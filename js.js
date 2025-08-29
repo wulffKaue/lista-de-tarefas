@@ -12,11 +12,10 @@ button.addEventListener("click", function () {
   let warning = document.getElementsByClassName("aviso")[0];
 
   if (inputVal !== "") {
-    let newElement = document.createElement("li");  
+    let newElement = document.createElement("li");
 
     newElement.textContent = inputVal;
 
-    // cria a Imagem das <li>.
     let img = document.createElement("img");
     img.src = "delete.png";
     img.style.width = "20px";
@@ -40,7 +39,7 @@ button.addEventListener("click", function () {
     buttonDelete.addEventListener("click", function () {
       img.style.display = "block";
       setTimeout(() => {
-       img.style.display = "none";
+        img.style.display = "none";
       }, 5000);
     });
 
@@ -54,3 +53,24 @@ button.addEventListener("click", function () {
     }, 5000);
   }
 });
+  let concludeTask = document.getElementById("concluirtarefa");
+
+  concludeTask.addEventListener("click", function () {
+    let allTasks = document.querySelectorAll("#lista li");
+
+    allTasks.forEach((li) => {
+      if (!li.querySelector(".complte-img")) {
+        let imgDelete = document.createElement("img");
+        imgDelete.src = "complete.png";
+        imgDelete.style.width = "20px";
+        imgDelete.style.height = "20px";
+        imgDelete.style.cursor = "pointer";
+        imgDelete.classList.add("complete-img")
+
+        imgDelete.addEventListener("click", () => {
+          li.remove();
+        });
+        li.appendChild(imgDelete);
+      }
+    });
+  });
