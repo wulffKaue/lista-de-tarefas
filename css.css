@@ -132,3 +132,7 @@ li button:hover {
   animation: buttonDelete 1s infinite;
   display: block;
 }
+
+#excluir:hover {
+  background: #e91313;
+}
