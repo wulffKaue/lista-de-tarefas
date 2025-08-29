@@ -136,3 +136,43 @@ li button:hover {
 #excluir:hover {
   background: #e91313;
 }
+
+#concluirtarefa{
+  background-color: #0d65ad;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  display: flex;                
+  align-items: center;
+  justify-content: center;
+}
+
+#concluirtarefa .icon {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+#concluirtarefa .text{
+  display: inline-block; 
+  opacity: 0;                
+  white-space: nowrap;    
+  transition: opacity 0.2s ease;
+  margin-left: 5px;
+  max-width: 0;
+  overflow: hidden;
+}
+
+#concluirtarefa:hover {
+  background-color: #296392;
+  width: 130px;        
+  justify-content: flex-start;
+  padding-left: 10px;
+  justify-content: flex-start;
+}
+
+
+#concluirtarefa:hover span {
+  max-width: 200px;
+  opacity: 1;     
+}
